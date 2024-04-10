@@ -38,7 +38,7 @@ function App() {
         setdata([...data, response.data]);
         setNewTitle(''); 
     } catch (error) {
-        console.error('Error adding post: ', error);
+        console.error('Error adding : ', error);
       }
     };
 
@@ -47,7 +47,7 @@ function App() {
     const updateTitle = async (id, newTitle) => {
       try {
         const response = await axios.put(`
-        https://jsonplaceholder.typicode.com/posts/${id}`, {
+        https://jsonplaceholder.typicode.com/albums/${id}`, {
           id,
           title: newTitle
         });
@@ -57,7 +57,7 @@ function App() {
         setEditId(null); 
         setNewTitle(''); 
       } catch (error) {
-        console.error('Error updating post: ', error);
+        console.error('Error updating : ', error);
       }
     };
   
